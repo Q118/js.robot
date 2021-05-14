@@ -1,4 +1,6 @@
-const net = new brain.NeuralNetwork()
+const net = new brain.NeuralNetwork({
+    hiddenLayers: [1, 2, 6]
+})
 
 
 net.train([
@@ -23,3 +25,5 @@ net.train([
 const diagram = document.getElementById('diagram')
 
 diagram.innerHTML = brain.utilities.toSVG(net)
+
+
